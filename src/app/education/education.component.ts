@@ -9,12 +9,12 @@ export class EducationComponent implements OnInit {
   public imgsrc = 'assets/me.jpg';
 
   public list = [
-    { img: 'assets/n2.jpg' },
-    { img: 'assets/n3.jpg' },
-    { img: 'assets/n4.jpg' },
-    { img: 'assets/n5.jpg' },
-    { img: 'assets/n6.jpg' },
-    { img: 'assets/n7.jpg' },
+    { img: 'assets/n7.png' },
+    { img: 'assets/n8.png' },
+    { img: 'assets/n12.png' },
+    { img: 'assets/n7.png' },
+    { img: 'assets/n12.png' },
+    { img: 'assets/n7.png' },
   ];
 
   constructor() {}

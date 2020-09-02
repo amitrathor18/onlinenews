@@ -49,6 +49,7 @@ export class LoginComponent implements OnInit {
     const data = this.fbFormGroup.value;
 
     if (data.username === 'amit' && data.password === 'admin') {
+      sessionStorage.setItem('sid', 'true');
       this.router.navigate(['home']);
     } else {
       this.uiInvalidCredential = true;
