@@ -42,3 +42,4 @@ import { DetailsModalComponent } from './details-modal/details-modal.component';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
