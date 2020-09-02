@@ -18,7 +18,18 @@ import { LogoutModalComponent } from './logout-modal/logout-modal.component';
 import { DetailsModalComponent } from './details-modal/details-modal.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterComponent, PageNotFoundComponent, HomeComponent, PersonalInfoComponent, EducationComponent, ContactUsComponent, LogoutModalComponent, DetailsModalComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    RegisterComponent,
+    PageNotFoundComponent,
+    HomeComponent,
+    PersonalInfoComponent,
+    EducationComponent,
+    ContactUsComponent,
+    LogoutModalComponent,
+    DetailsModalComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
