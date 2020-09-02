@@ -1,57 +1,44 @@
 <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-6 col-md-6 d-none d-md-block image-container"></div>
-  
-      <div class="col-lg-6 col-md-6 form-container">
-        <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 form-box text-center">
-          <div class="logo mb-3">
-            <img src="assets/n5.png" width="150px">
+  <div class="row">
+    <!-- left block -->
+    <div class="col-lg-6 col-md-6 d-none d-md-block image-container">
+
+    </div>
+    <!-- Right block  -->
+    <div class="col-lg-6 col-md-6 form-container">
+      <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 form-box text-center" [formGroup]="fbFormGroup">
+        <div class="logo mb-3">
+          <img src="assets/n5.png" width="150px">
+        </div>
+        <div class="heading mb-4">
+          <h4>Login into your account</h4>
+        </div>
+
+        <div class="col bg-light d-flex flex-column justify-content-center align-items-center" id="box" >
+          <div class="alert alert-info" role="alert" *ngIf="uiInvalidCredential">
+            A simple danger alert—check it out!
           </div>
-          <div class="heading mb-4">
-            <h4>Login into your account</h4>
+
+         
+
+          <div>
+            <input type="text" placeholder="Enter Username" class="form-control" formControlName="username" />
           </div>
-          <form>
-            <div class="form-input d-flex">
-              <!-- <span><i class="fa fa-envelope"></i></span> -->
-              <!-- <div class="d-flex flex-row"> -->
-              <!-- <fa-icon [icon]="faGoogle"> </fa-icon> -->
-              <input type="email" placeholder="Email Address" required="">
-              <!-- </div> -->
-            </div>
-  
-            <div class="form-input">
-              <span><i class="fa fa-lock fa-lg"></i></span>
-              <input type="password" placeholder="Password" required="">
-            </div>
-            <div class="row mb-3">
-              <div class="col-6 d-flex">
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="cb1">
-                  <label class="custom-control-label text-white" for="cb1">Remember me</label>
-                </div>
-              </div>
-              <div class="col-6 text-right">
-                <a href="forget.html" class="forget-link">Forget Password</a>
-              </div>
-            </div>
-            <div class="text-left mb-3">
-              <button type="submit" class="btn">Login</button>
-            </div>
-            <div class="text-center mb-2">
-              <div class="mb-3" style="color: #777">or login with</div>
-  
-              <a href="" class="btn btn-social btn-facebook">facebook</a>
-  
-              <a href="" class="btn btn-social btn-google">google</a>
-  
-              <a href="" class="btn btn-social btn-twitter">twitter</a>
-            </div>
-  
-            <div style="color: #777">Don't have an account
-              <a href="register.html" class="register-link">Register here</a>
-            </div>
-          </form>
+
+          <div class="mt-1">
+            <input type="password" placeholder="Enter Password" class="form-control" formControlName="password" />
+          </div>
+          <button id="hoverbtn" class="btn btn-sm btn-warning mt-2 mb-2" [disabled]="!fbFormGroup.valid" (click)="loginProcessHere()">
+            Login Here
+          </button>
+
+
+
+          <div style="color: #777">Don't have an account
+            <a routerLink="/register" class="register-link">Register here</a>
+          </div>
         </div>
       </div>
     </div>
   </div>
+</div>

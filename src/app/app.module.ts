@@ -9,9 +9,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterComponent, PageNotFoundComponent],
+  declarations: [AppComponent, LoginComponent, RegisterComponent, PageNotFoundComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
