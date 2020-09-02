@@ -1,1 +1,44 @@
-<p>register works!</p>
+<div class="container-fluid">
+    <div class="row">
+        <!-- left block -->
+        <div class="col-lg-6 col-md-6 d-none d-md-block image-container">
+
+        </div>
+        <!-- Right block  -->
+        <div class="col-lg-6 col-md-6 form-container">
+
+            <div class="col bg-light d-flex flex-column justify-content-center align-items-center"
+                [formGroup]="fbFormGroup">
+                <div class="alert alert-danger" role="alert" *ngIf="uiInvalidCredential">
+                    A simple danger alert—check it out!
+                </div>
+
+                <div class="h4">Application Register</div>
+
+                <div>
+                    <input type="text" placeholder="Enter Username" class="form-control" formControlName="username" />
+                </div>
+
+                <div class="mt-1">
+                    <input type="password" placeholder="Enter Password" class="form-control"
+                        formControlName="password" />
+                </div>
+
+                <div class="mt-1">
+                    <input type="text" placeholder="Enter Email" class="form-control" formControlName="email" />
+                </div>
+
+                <div class="mt-1">
+                    <input type="text" placeholder="Enter Mobile" class="form-control" formControlName="mobile" />
+                </div>
+
+                <button class="btn btn-sm btn-warning mt-2 mb-2" [disabled]="!fbFormGroup.valid"
+                    (click)="registerHere()">
+                    Register Here
+                </button>
+
+                <a routerLink="/login">Login Here</a>
+            </div>
+        </div>
+    </div>
+</div>
