@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class EducationComponent implements OnInit {
   public imgsrc = 'assets/me.jpg';
 
-  public list = [{ img: 'assets/n17.png' }];
+  
 
   constructor() {}
 
