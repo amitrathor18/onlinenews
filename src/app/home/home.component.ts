@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { faAirFreshener } from '@fortawesome/free-solid-svg-icons';
+import { faNewspaper } from '@fortawesome/free-solid-svg-icons';
 
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { LogoutModalComponent } from '../logout-modal/logout-modal.component';
@@ -10,7 +10,7 @@ import { LogoutModalComponent } from '../logout-modal/logout-modal.component';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  public faAirFreshener = faAirFreshener;
+  public faNewspaper = faNewspaper;
 
   constructor(private router: Router, private modalService: NgbModal) {}
 

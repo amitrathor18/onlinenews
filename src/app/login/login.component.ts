@@ -1,7 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+// import {
+//   FormBuilder,
+//   FormGroup,
+//   FormControl,
+//   Validators,
+//   MinLengthValidator,
+// } from '@angular/forms';
 // import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 // import { faUser } from '@fortawesome/free-solid-svg-icons';
 // import { faLock } from '@fortawesome/free-solid-svg-icons';
+import { faNewspaper } from '@fortawesome/free-solid-svg-icons';
 
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -18,14 +26,25 @@ export class LoginComponent implements OnInit {
   // // public faGoogle = faGoogle;
   // public faUser = faUser;
   // public faLock = faLock;
+  public faNewspaper = faNewspaper;
+
   public uiInvalidCredential = false;
 
   public fbFormGroup = this.fb.group({
-    username: ['', Validators.required],
-    password: ['', Validators.required],
+    username: [
+      '',
+      Validators.required,
+      // Validators.minLength(4),
+      // Validators.maxLength(18),
+    ],
+    password: [
+      '',
+      Validators.required,
+      // Validators.minLength(5),
+      // Validators.maxLength(15),
+    ],
   });
 
-  
   constructor(
     private fb: FormBuilder,
     private router: Router,
@@ -34,27 +53,28 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  // async loginProcessHere() {
-  //   const data = this.fbFormGroup.value;
-
-  //   // ajax call check the local mysql api to  verify username and password
-  //   const url = 'http://localhost:3000/auth-user';
-  //   const result: any = await this.http.post(url, data).toPromise();
-  //   if (result.opr) {
-  //     sessionStorage.setItem('sid', 'true');
-  //     this.router.navigate(['home']);
-  //   } else {
-  //     this.uiInvalidCredential = true;
-  //   }
-  
-  loginProcessHere() {
+  async loginProcessHere() {
     const data = this.fbFormGroup.value;
 
-    if (data.username === 'amit' && data.password === 'admin') {
+    // ajax call check the local mysql api to  verify username and password
+    const url = 'http://localhost:3000/auth-user';
+    const result: any = await this.http.post(url, data).toPromise();
+    if (result.opr) {
       sessionStorage.setItem('sid', 'true');
       this.router.navigate(['home']);
     } else {
       this.uiInvalidCredential = true;
     }
+
+  // loginProcessHere() {
+  //   const data = this.fbFormGroup.value;
+
+  //   if (data.username === 'amit' && data.password === 'admin') {
+  //     sessionStorage.setItem('sid', 'true');
+  //     this.router.navigate(['home']);
+  //   } else {
+  //     this.uiInvalidCredential = true;
+  //   }
   }
 }
+

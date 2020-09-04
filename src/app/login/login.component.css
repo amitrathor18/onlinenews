@@ -1,14 +1,16 @@
 .image-container {
-  background: url("/assets/n12.png") center no-repeat;
+  background: url("/assets/n15.jpg") center no-repeat;
+  /* background-color: #3066db; */
   background-size: 90%;
   height: 100vh;
 }
 
 .form-container,
 #box {
-  background-color: #d8d8d6;
+  background-color: #fff;
   display: flex;
   justify-content: center;
+  background-size: cover;
 }
 
 .form-box {

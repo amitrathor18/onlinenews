@@ -1,38 +1,19 @@
 <div class="container">
     <div class="row">
         <!-- <ng-container > -->
-            <div class="col-6 my-3" *ngFor="let article of mArticles">
-                <h5>{{ article.title }}</h5>
-
-                <div [ngStyle]="{'background': 'url(../assets/images/' + article.source.id + '.png)'}"
-                           class="example-header-image"></div>
-                <div>
-                    {{ article.source.name }}
-                </div>
-                <button class="btn btn-outline-secondary" (click)="showDetailsModal(item)">
-                    Show Details
-                </button>
+        <div class="col-12 my-2 border border-warning p-4 shadow-lg p-3 mb-3 bg-white rounded"
+            *ngFor="let item of list">
+            <h5>{{ item.title }}</h5>
+            <div class="d-flex ">
+                <img [src]="item.urlToImage" alt="" style="height: 50%; width: 50%; object-fit: cover" />
             </div>
-
-            <!-- <div *ngIf="NewsApiService.article.title">
-
-
-                <mat-card class="example-card" *ngFor="let article of mArticles">
-                    <mat-card-header>
-                      <div mat-card-avatar [ngStyle]="{'background': 'url(../assets/images/' + article.source.id + '.png)'}"
-                           class="example-header-image"></div>
-                      <mat-card-title>{{ article.title }}</mat-card-title>
-                      <mat-card-subtitle>{{ article.source.name }}</mat-card-subtitle>
-                    </mat-card-header>
-                    <img mat-card-image class="img-article" src="{{ article.urlToImage }}" alt="">
-                    <mat-card-content>
-
-                <h2>Messages</h2>
-                <button class="clear"
-                        (click)="messageService.clear()">clear</button>
-                <div *ngFor='let message of messageService.messages'> {{message}} </div>
-              
-              </div> -->
+            <div>
+                {{ item.description }}
+            </div>
+            <button class="btn btn-outline-secondary" (click)="showDetailsModal(item)">
+                View Picture
+            </button>
+        </div>
         <!-- </ng-container> -->
     </div>
 </div>

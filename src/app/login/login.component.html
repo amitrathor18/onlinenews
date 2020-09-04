@@ -1,7 +1,10 @@
 <div class="container-fluid">
-  <div class="row">
+  <div class="row ">
     <!-- left block -->
-    <div class="col-lg-6 col-md-6 d-none d-md-block image-container">
+    <div class="col-lg-6 col-md-6 d-none d-md-block image-container mr-0">
+      <!-- <div class="d-flex flex-column justify-content-center align-items-center">
+        <fa-icon [icon]="faNewspaper" style="font-size: 35px; margin-right: 8px"></fa-icon>
+      </div> -->
 
     </div>
     <!-- Right block  -->
@@ -14,12 +17,12 @@
           <h4>Login into your account</h4>
         </div>
 
-        <div class="col bg-light d-flex flex-column justify-content-center align-items-center" id="box" >
+        <div class="col bg-light d-flex flex-column justify-content-center align-items-center" id="box">
           <div class="alert alert-info" role="alert" *ngIf="uiInvalidCredential">
             A simple danger alert—check it out!
           </div>
 
-         
+
 
           <div>
             <input type="text" placeholder="Enter Username" class="form-control" formControlName="username" />
@@ -28,7 +31,8 @@
           <div class="mt-1">
             <input type="password" placeholder="Enter Password" class="form-control" formControlName="password" />
           </div>
-          <button id="hoverbtn" class="btn btn-sm btn-warning mt-2 mb-2" [disabled]="!fbFormGroup.valid" (click)="loginProcessHere()">
+          <button id="hoverbtn" class="btn  btn-sm btn-warning mt-2 mb-2" [disabled]="!fbFormGroup.valid"
+            (click)="loginProcessHere()">
             Login Here
           </button>
 

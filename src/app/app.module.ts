@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { NewsApiService } from './news-api.service';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -40,8 +39,7 @@ import { DetailsModalComponent } from './details-modal/details-modal.component';
     HttpClientModule,
     NgbModule,
   ],
-  providers: [NewsApiService],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
-
