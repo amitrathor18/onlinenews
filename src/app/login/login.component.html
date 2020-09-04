@@ -9,7 +9,7 @@
     </div>
     <!-- Right block  -->
     <div class="col-lg-6 col-md-6 form-container">
-      <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 form-box text-center" [formGroup]="fbFormGroup">
+      <div class=" form-box text-center" [formGroup]="fbFormGroup">
         <div class="logo mb-3">
           <img src="assets/n5.png" width="150px">
         </div>
@@ -17,19 +17,19 @@
           <h4>Login into your account</h4>
         </div>
 
-        <div class="col bg-light d-flex flex-column justify-content-center align-items-center" id="box">
+        <div class=" bg-light d-flex flex-column justify-content-center align-items-center" id="box">
           <div class="alert alert-info" role="alert" *ngIf="uiInvalidCredential">
-            A simple danger alert—check it out!
+            Wrong Username or Password!
           </div>
 
 
 
           <div>
-            <input type="text" placeholder="Enter Username" class="form-control" formControlName="username" />
+            <input type="text" placeholder="Enter Username" class="form-control" formControlName="username" required/>
           </div>
 
           <div class="mt-1">
-            <input type="password" placeholder="Enter Password" class="form-control" formControlName="password" />
+            <input type="password" placeholder="Enter Password" class="form-control" formControlName="password" required />
           </div>
           <button id="hoverbtn" class="btn  btn-sm btn-warning mt-2 mb-2" [disabled]="!fbFormGroup.valid"
             (click)="loginProcessHere()">
@@ -40,8 +40,8 @@
 
           <div style="color: #777">Don't have an account
             <a routerLink="/register" class="register-link">Register here</a>
-           </div>
-           <div>
+          </div>
+          <div>
             <a routerLink="/forget" class="register-link">Forget Password</a>
           </div>
         </div>

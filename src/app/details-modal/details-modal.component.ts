@@ -9,7 +9,7 @@ export class DetailsModalComponent implements OnInit {
   // @Input() name;
   // @Input() data;
 
-  // constructor(public activeModal: NgbActiveModal) {}
+  // constructor() {}
 
   ngOnInit(): void {}
 }
