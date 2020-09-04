@@ -6,7 +6,7 @@
 
 .form-container,
 #box {
-  background-color: #fccc00;
+  background-color: #d8d8d6;
   display: flex;
   justify-content: center;
 }
@@ -56,7 +56,7 @@
 
 .form-box input[type="checkbox"]:not(:checked) + label:before {
   background: transparent;
-  border: 2px solid #fff;
+  border: 2px solid rgb(201, 173, 17);
   width: 15px;
   height: 15px;
 }
@@ -82,7 +82,7 @@
   color: #292525;
 }
 
-.form-box button[type="submit"] {
+.form-box #hoverbtn button[type="submit"] {
   border: none;
   cursor: pointer;
   width: 150px;

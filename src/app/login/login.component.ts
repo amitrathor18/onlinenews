@@ -24,6 +24,8 @@ export class LoginComponent implements OnInit {
     username: ['', Validators.required],
     password: ['', Validators.required],
   });
+
+  
   constructor(
     private fb: FormBuilder,
     private router: Router,
@@ -44,7 +46,7 @@ export class LoginComponent implements OnInit {
   //   } else {
   //     this.uiInvalidCredential = true;
   //   }
-  // }
+  
   loginProcessHere() {
     const data = this.fbFormGroup.value;
 
