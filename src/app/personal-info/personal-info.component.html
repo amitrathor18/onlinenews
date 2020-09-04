@@ -1,23 +1,38 @@
 <div class="container">
     <div class="row">
         <!-- <ng-container > -->
-            <div class="col-12 my-3" *ngFor="let item of list">
-                <h5>{{ item.title }}</h5>
+            <div class="col-6 my-3" *ngFor="let article of mArticles">
+                <h5>{{ article.title }}</h5>
+
+                <div [ngStyle]="{'background': 'url(../assets/images/' + article.source.id + '.png)'}"
+                           class="example-header-image"></div>
                 <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum tempore
-                    neque dolore excepturi. Illo quisquam itaque possimus, veniam sunt,
-                    perferendis necessitatibus ut, in temporibus veritatis dolorum quidem
-                    nesciunt eos corporis amet dignissimos maxime accusamus assumenda?
-                    Architecto harum voluptates, asperiores dolorem vel consequatur ipsum?
-                    Quas inventore architecto vitae laudantium maiores officiis doloribus
-                    esse harum, repellendus dolor vero. Ab quaerat, sunt error consectetur
-                    optio soluta aspernatur? Ducimus inventore est quod sequi molestiae.
-                    Amet temporibus omnis
+                    {{ article.source.name }}
                 </div>
                 <button class="btn btn-outline-secondary" (click)="showDetailsModal(item)">
                     Show Details
                 </button>
             </div>
+
+            <!-- <div *ngIf="NewsApiService.article.title">
+
+
+                <mat-card class="example-card" *ngFor="let article of mArticles">
+                    <mat-card-header>
+                      <div mat-card-avatar [ngStyle]="{'background': 'url(../assets/images/' + article.source.id + '.png)'}"
+                           class="example-header-image"></div>
+                      <mat-card-title>{{ article.title }}</mat-card-title>
+                      <mat-card-subtitle>{{ article.source.name }}</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image class="img-article" src="{{ article.urlToImage }}" alt="">
+                    <mat-card-content>
+
+                <h2>Messages</h2>
+                <button class="clear"
+                        (click)="messageService.clear()">clear</button>
+                <div *ngFor='let message of messageService.messages'> {{message}} </div>
+              
+              </div> -->
         <!-- </ng-container> -->
     </div>
 </div>
