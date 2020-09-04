@@ -17,6 +17,7 @@ import { EducationComponent } from './education/education.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { LogoutModalComponent } from './logout-modal/logout-modal.component';
 import { DetailsModalComponent } from './details-modal/details-modal.component';
+import { ForgetComponent } from './forget/forget.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { DetailsModalComponent } from './details-modal/details-modal.component';
     ContactUsComponent,
     LogoutModalComponent,
     DetailsModalComponent,
+    ForgetComponent,
   ],
   imports: [
     BrowserModule,

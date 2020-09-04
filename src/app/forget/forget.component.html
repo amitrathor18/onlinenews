@@ -1,0 +1,39 @@
+<body>
+    <div class="container-fluid" [formGroup]="fbFormGroup">
+        <div class="row parent d-flex flex-column justify-content-center align-items-center border border-info p-5"
+            style="border-radius:20px;">
+            <h1>Set a new password</h1>
+
+            <div class="col-12 mt-3">
+                <input type="email" id="email" class="form-control mb-2" placeholder="Enter Email"
+                    style="font-size:20px;" formControlName="email">
+                <label for="" style="color:white; font-size: small" *ngIf="
+                  fbFormGroup.get('email').invalid &&
+                  fbFormGroup.get('email').touched
+                ">Email Required</label>
+            </div>
+
+            <div class="col-12">
+                <input type="password" id="newpass" class="form-control mb-4" placeholder="Enter New password"
+                    style="font-size:20px;" formControlName="password">
+                <label for="" style="color:white; font-size: small" *ngIf="
+                  fbFormGroup.get('password').invalid &&
+                  fbFormGroup.get('password').touched
+                ">password Required</label>
+
+            </div>
+
+
+            <div class="col-12 d-flex justify-content-center">
+                <button type="submit" class="btn btn-success mb-4" (click)="changepass()">Change password</button>
+            </div>
+
+            <div class="col-12 d-flex justify-content-center mb-2">
+
+                <button class="btn btn-info btn-sm" (click)="gotoLogin('login')">Back to Login</button>
+
+            </div>
+        </div>
+
+    </div>
+</body>

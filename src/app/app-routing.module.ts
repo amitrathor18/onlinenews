@@ -5,6 +5,8 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
+import { ForgetComponent } from './forget/forget.component';
+
 
 import { PersonalInfoComponent } from './personal-info/personal-info.component';
 import { EducationComponent } from './education/education.component';
@@ -13,6 +15,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'forget', component: ForgetComponent },
+
   {
     path: 'home',
     component: HomeComponent,
